@@ -4,7 +4,7 @@ import Lenis from 'lenis'
 import Landing from '@/components/Landing';
 import { AnimatePresence,} from 'framer-motion';
 import Preloader from '@/components/Preloader';
-import ZoomParallax from '@/components/Zoom/index';
+import ZoomParallax from '@/components/Zoom';
 
 import Houses from '@/components/Houses';
 import Services from '@/components/Services';
