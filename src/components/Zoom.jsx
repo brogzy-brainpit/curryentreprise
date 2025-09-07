@@ -1,0 +1,115 @@
+'use client';
+import styles from './styles.module.scss';
+import Picture5 from '../../public/images/5.jpg';
+import Picture6 from '../../public/images/6.jpg';
+import Picture7 from '../../public/images/7.jpeg';
+import Image from 'next/image';
+import { useScroll, useTransform, motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
+function Zoom() {
+  const container = useRef(null);
+  const trackZoom = useRef(null);
+  const videoRefs = useRef([]); // store refs for all videos
+ const isZoomInView = useInView(trackZoom, { amount: 0.5, once: false });
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  });
+
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
+  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+
+  const pictures = [
+    {
+      src: 'https://video.wixstatic.com/video/bcc971_854ad70247c842c3ab892938519e8d68/1080p/mp4/file.mp4',
+      scale: scale4,
+      type: 'video',
+    },
+    {
+      src: '/videos/hero.mp4',
+      scale: scale5,
+      type: 'video',
+    },
+    {
+      src: '/videos/vid2.mp4',
+      scale: scale6,
+      type: 'video',
+    },
+    {
+      src: '/videos/vid2.mp4',
+      scale: scale5,
+      type: 'video',
+    },
+    {
+      src: Picture5,
+      scale: scale6,
+      type: 'image',
+    },
+    {
+      src: Picture6,
+      scale: scale8,
+      type: 'image',
+    },
+    {
+      src: Picture7,
+      scale: scale9,
+      type: 'image',
+    },
+  ];
+
+  // ✅ Control videos depending on scroll progress
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on('change', (latest) => {
+        console.log(latest)
+        console.log(isZoomInView)
+      videoRefs.current.forEach((video) => {
+        if (!video) return;
+        if (isZoomInView && latest >= 0 && latest <= 0.999999999915879) {
+          if (video.paused) {
+            video.play().catch(() => {}); // silent catch for autoplay restrictions
+          }
+        } else {
+          if (!video.paused) {
+            video.pause();
+            video.currentTime = 0; // optional reset
+          }
+        }
+      });
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress,isZoomInView]);
+
+  return (
+    <div ref={container} className={styles.container}>
+      <div ref={trackZoom} className={styles.sticky}>
+        {pictures.map(({ src, scale, type }, index) => (
+          <motion.div key={index} style={{ scale }} className={styles.el}>
+            <div className={styles.imageContainer}>
+              {type === 'video' ? (
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)} // ✅ store ref
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+                >
+                  <source src={src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <Image src={src} fill alt="image" placeholder="blur" />
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+export default Zoom;

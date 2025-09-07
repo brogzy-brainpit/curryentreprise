@@ -56,7 +56,7 @@ export default function Index() {
         <>
         <div className={` container mx-auto z-[999] backdrop-blur-lg  relative  mix-blend-differenc `}>
         <div ref={header} className={`${styles.header} `}>
-               <ScaleUpContent delay={1.50}>
+               <ScaleUpContent delay={0.50}>
             <div className={`${styles.logo} text-brand-text-dark transition-all duration-500 ease-in-out`}>
                 <p className={`${styles.copyright} font-custom`}>©</p>
                 <div className={`${styles.name} font-custom mix-blend-differenc text-brand-text-dark`}>
@@ -68,7 +68,7 @@ export default function Index() {
             </ScaleUpContent>
 
             <div className={`${styles.nav} text-brand-text-dark transition-all duration-500 ease-in-out`}>
-               <ScaleUpContent delay={1.50}>
+               <ScaleUpContent delay={0.50}>
                 <Magnetic>
                     <div>
                     <DarkModeToggle/>
@@ -79,7 +79,7 @@ export default function Index() {
                {navItems.map(({href,title},index)=>{
                 return (
                     
-               <ScaleUpContent delay={1.50}>
+               <ScaleUpContent delay={0.50}>
                       <Magnetic key={index}>
                     <div className={`${styles.el} font-custom-condensed `}>
                        
@@ -90,7 +90,7 @@ export default function Index() {
                    </ScaleUpContent>
                 )
                })}
-               <ScaleUpContent delay={1.50}>
+               <ScaleUpContent delay={0.50}>
                 <CustomBtn title='book a call' href='#book-a-call' className='max-h-fit ml-10'/>
                </ScaleUpContent>
                 

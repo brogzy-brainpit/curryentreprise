@@ -1,5 +1,4 @@
 // import Header from "@/components/Header";
-import Header from "@/components/Header";
 import { Bebas_Neue, Manjari} from "next/font/google";
 import "./fonts.css";
 import "./globals.css";
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
  <html lang="en" className="dark">
       <head />
       <body className={`${bebas.variable} ${manjari.variable}`}>
-        <Header />
+        {/* <Header /> */}
         {/* <NewsletterModal /> */}
         {children}
       </body>

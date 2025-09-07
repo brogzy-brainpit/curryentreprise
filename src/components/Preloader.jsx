@@ -10,13 +10,13 @@ const menuSlide={
     }, 
     enter:{
         scale:4,
-     transition:{duration:0.8, ease:[0.76, 0, 0.24, 1]},
+     transition:{duration:0.8, ease:'easeOut'},
 
     },
      exit:{
         scale:50,
         // transition:{duration:1.5, ease:[0.76, 0, 0.24, 1]},
-        transition:{duration:0.8},
+        transition:{duration:0.8,ease:'easeOut'},
 
     },
 }
