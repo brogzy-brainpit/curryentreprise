@@ -1,0 +1,157 @@
+.container{
+    height: 300vh;
+    position: relative;
+    .sticky{
+        position: sticky;
+        overflow: hidden;
+        top: 0;
+        height: 100vh;
+
+        .el{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .imageContainer{
+                position: relative;
+                width: 25vw;
+                height: 25vh;
+                img{
+                    object-fit: cover;
+                }
+            }
+            &:nth-of-type(2){
+                // flower img
+                .imageContainer{
+                    top: -30vh;
+                    left: 5vw;
+                    width: 35vw;
+                    height: 30vh;
+                }
+            }
+            &:nth-of-type(3){
+                .imageContainer{
+                    top: -10vh;
+                    left: -25vw;
+                    width: 20vw;
+                    height: 45vh;
+                }
+            }
+            &:nth-of-type(4){
+                .imageContainer{
+                    left: 27.5vw;
+                    width: 25vw;
+                    height: 25vh;
+                }
+            }
+            &:nth-of-type(5){
+                .imageContainer{
+                    top: 27.5vh;
+                    left: 5vw;
+                    width: 20vw;
+                    height: 25vh;
+                }
+            }
+            &:nth-of-type(6){
+                .imageContainer{
+                    top: 27.5vh;
+                    left: -22.5vw;
+                    width: 30vw;
+                    height: 25vh;
+                }
+            }
+            &:nth-of-type(7){
+                .imageContainer{
+                    top: 22.5vh;
+                    left: 25vw;
+                    width: 15vw;
+                    height: 15vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container{
+    height: 300vh;
+    position: relative;
+    .sticky{
+        position: sticky;
+        overflow: hidden;
+        top: 0;
+        height: 100vh;
+
+        .el{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .imageContainer{
+                position: relative;
+                width: 31vw;
+                height: 25vh;
+                img{
+                    object-fit: cover;
+                }
+            }
+            &:nth-of-type(2){
+                // flower img
+                .imageContainer{
+                    top: -26vh;
+                    left: 5vw;
+                    width: 35vw;
+                    height: 22vh;
+                }
+            }
+            &:nth-of-type(3){
+                .imageContainer{
+                    top: -10vh;
+                    left: -32vw;
+                    width: 28vw;
+                    height: 28vh;
+                }
+            }
+            &:nth-of-type(4){
+                .imageContainer{
+                    left: 31.5vw;
+                    width: 25vw;
+                    height: 20vh;
+                }
+            }
+            &:nth-of-type(5){
+                .imageContainer{
+                    top: 27.5vh;
+                    left: 5vw;
+                    width: 20vw;
+                    height: 20vh;
+                }
+            }
+            &:nth-of-type(6){
+                .imageContainer{
+                    top: 24.5vh;
+                    left: -22.5vw;
+                    width: 30vw;
+                    height: 20vh;
+                }
+            }
+            &:nth-of-type(7){
+                .imageContainer{
+                    top: 21.5vh;
+                    left: 32vw;
+                    width: 25vw;
+                    height: 15vh;
+                }
+            }
+        }
+    }
+}
+
+}
