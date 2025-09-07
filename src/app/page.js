@@ -4,7 +4,7 @@ import Lenis from 'lenis'
 import Landing from '@/components/Landing';
 import { AnimatePresence,} from 'framer-motion';
 import Preloader from '@/components/Preloader';
-import Zoom from '@/components/Zoom';
+// import Zoom from '@/components/Zoom';
 
 import Houses from '@/components/Houses';
 import Services from '@/components/Services';
@@ -43,7 +43,7 @@ export default function Home() {
     </AnimatePresence>
     
       <Landing />
-      <Zoom/>
+      {/* <Zoom/> */}
       <Landing2 />
     <OurNumbers/>
     <Intro/>
