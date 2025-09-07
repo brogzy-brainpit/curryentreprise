@@ -1,10 +1,9 @@
 "use client";
-import ScaleUpContent from "@/app/effects/ScaleUpContent";
 import SlideUpText from "@/app/effects/SlideUpText";
 import { motion, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
-function StepDot({ cx, cy, r, angle, label, scrollYProgress, circumference, isActive }) {
+function StepDot({key, cx, cy, r, angle, label, scrollYProgress, circumference, isActive }) {
   const rad = (angle * Math.PI) / 180;
   let x = cx + r * Math.cos(rad);
   let y = cy + r * Math.sin(rad);
@@ -28,7 +27,7 @@ function StepDot({ cx, cy, r, angle, label, scrollYProgress, circumference, isAc
   const labelDy = angle === -90 ? -20 : angle === 90 ? 28 : 6;
 
   return (
-    <g>
+    <g key={key}>
       <motion.circle
         cx={cx + r * Math.cos(rad)}
         cy={cy + r * Math.sin(rad)}
