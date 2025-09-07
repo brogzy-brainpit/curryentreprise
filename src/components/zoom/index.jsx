@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { useScroll, useTransform, motion} from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-export default function Index() {
+ function Zoom() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -106,3 +106,4 @@ console.log(scale4)
         </div>
     )
 }
+export default Zoom
