@@ -30,7 +30,7 @@ module.exports = {
         'heading': 'clamp(60px, 10vw, 90px)',
         'footer': 'clamp(40px, 8vw, 60px)',
         'heading2': 'clamp(45px, 8vw, 80px)',
-        'para': 'clamp(14px, 1vw, 28px)',
+        'para': 'clamp(16px, 1vw, 38px)',
       },
       lineHeight:{
          'regular': 'clamp(24px, 3vw, 32px)',

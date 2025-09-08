@@ -56,7 +56,7 @@ function Anime() {
             initial="initial"
             variants={slideUp}
             animate={inViewText1 ? 'enter' : 'exit'}
-            className="w-full h-full absolute top-0 left-0 bg-[#1C2218] z-10"
+            className="w-full h-full absolute top-0 left-0 bg-brand-text-dark dark:bg-brand-background-dark z-10"
           />
           <h2 className="text-footer leading-[1] font-custom text-brand-text dark:text-brand-text-dark transition-all duration-500">
             {review.text}
@@ -80,7 +80,7 @@ function Anime() {
             initial="initial"
             variants={slideUp}
             animate={inViewImg1 ? 'enter' : 'exit'}
-            className="w-full h-full absolute top-0 left-0 bg-[#1C2218] z-10"
+            className="w-full h-full absolute top-0 left-0 bg-brand-text-dark dark:bg-brand-background-dark z-10"
           />
           <Image
             src={review.image}
@@ -104,7 +104,7 @@ function Anime() {
             initial="initial"
             variants={slideUp}
             animate={inViewImg2 ? 'enter' : 'exit'}
-            className="w-full h-full absolute top-0 left-0 bg-[#1C2218] z-10"
+            className="w-full h-full absolute top-0 left-0 bg-brand-text-dark dark:bg-brand-background-dark z-10"
           />
           <Image
             src={review.image}
@@ -125,7 +125,7 @@ function Anime() {
             initial="initial"
             variants={slideUp}
             animate={inViewText2 ? 'enter' : 'exit'}
-            className="w-full h-full absolute top-0 left-0 bg-[#1C2218] z-10"
+            className="w-full h-full absolute top-0 left-0 bg-brand-text-dark dark:bg-brand-background-dark z-10"
           />
           <h2 className="text-footer leading-[1] font-custom text-brand-text dark:text-brand-text-dark transition-all duration-500">
             {review.text}

@@ -5,6 +5,7 @@ import ScaleUpContent from '@/app/effects/ScaleUpContent';
 import CustomBtn from './CustomBtn';
 import Magnetic from '@/app/common/Magnetic';
 import Image from 'next/image';
+import SlideUpText from '@/app/effects/SlideUpText';
 
 function Services() {
   const [index, setIndex] = useState(0);
@@ -12,14 +13,20 @@ function Services() {
 
   const reviews = [
     {
-      text: 'Improved relationships with others',
-      desc: 'Maybe you struggle to assert yourself and communicate your needs effectively...',
+      text: 'Highlights [3-5 minutes]',
+      desc: 'We captur and incoporate the most significant and emotional moments of the wedding using carefully selected music to create a comprehensive recap of the entire day',
       image:
         'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642423902f7b0e7b0a2b7275_image-p-500.jpg',
     },
     {
-      text: 'Financial Coaching',
-      desc: 'It can help individuals learn how to manage debt, invest wisely, and plan for retirement.',
+      text: 'Featurette',
+      desc: 'An extended version of the highlight reel featuring additional speeches and capturing the best and most emotional moments, lasting between 10 to 20 minutes',
+      image:
+        'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
+    },
+      {
+      text: 'Feature offer',
+      desc: 'this is a comprehensive edit covering the entire day from preparation to the end of the reception. We carefully select and edit the standout moments in chronological order, resulting in a video lasting to 3 hours.',
       image:
         'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
     },
@@ -46,9 +53,11 @@ function Services() {
 
   return (
     <div className="py-[90px]">
+ <SlideUpText text={'OUR OFFERS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out"/>
+    
       {/* Buttons */}
       <div className="px-4 flex breaker justify-end container">
-        <div className="flex gap-2 md:gap-4 flex-row breaker-child py-4 pb-0 md:py-8">
+        <div className="flex gap-2 md:gap-4 flex-row breaker-child py-4 pb-0 md:py-8       items-center justify-start flex-wrap">
           <Magnetic>
             <p
               onClick={() => {
@@ -58,7 +67,7 @@ function Services() {
               className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
                 ${index === 0 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
             >
-              Individuals
+              Highlight
             </p>
           </Magnetic>
           <Magnetic>
@@ -70,7 +79,19 @@ function Services() {
               className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
                 ${index === 1 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
             >
-              Couples therapy
+             Featurette
+            </p>
+          </Magnetic>
+          <Magnetic>
+            <p
+              onClick={() => {
+                setDirection(-1);
+                setIndex(2);
+              }}
+              className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
+                ${index === 2 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
+            >
+             Feature offer
             </p>
           </Magnetic>
         </div>

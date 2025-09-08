@@ -55,18 +55,17 @@ useEffect(() => {
 
 
   return (
-    <main className=' bg-brand-background dark:bg-brand-background-dark transition-all duration-500 ease-in-out'>
+    <main className=' bg-brand-text-dark dark:bg-brand-background-dark transition-all duration-500 ease-in-out'>
       <AnimatePresence mode="wait">
     {isLoading &&< Preloader/>}
     </AnimatePresence>
            {inView && <Header />}
       <Landing inView={inView}  />
-    
       {/* <Infinite/> */}
-      <Zoom/>
       <Landing2 />
+      {/* <Zoom/> */}
     <OurNumbers/>
-    <Intro/>
+    {/* <Intro/> */}
     <Anime/>
     <Services/>
       <Circular />

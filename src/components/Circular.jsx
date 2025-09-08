@@ -65,27 +65,27 @@ export default function ProcessCircle() {
 
   const steps = [
     {
-      label: "Strategy",
+      label: "Share",
       angle: -90,
       description:
-        "We define goals, research market trends, and set the foundation.",
+        "Send us your raw footage along with any notes, music choices, or preferences.",
     },
     {
-      label: "Design",
+      label: "Organize",
       angle: 0,
       description:
-        "Crafting beautiful user-friendly designs tailored to your audience.",
+        "We carefully sort through your clips, pick the best moments, and structure the story.",
     },
     {
-      label: "Build",
+      label: "Edit",
       angle: 90,
       description:
-        "Turning ideas into reality with clean, scalable development.",
+        "The footage is crafted into a cinematic wedding film with smooth cuts, color grading, and sound design.",
     },
     {
-      label: "Launch",
+      label: "Deliver",
       angle: 180,
-      description: "Deploy, optimize, and support for long-term success.",
+      description: "You get a polished film, ready to share with your couple — fast, clean, and stress-free."
     },
   ];
 
@@ -112,7 +112,9 @@ export default function ProcessCircle() {
 
   return (
     <section ref={containerRef} className="h-[400vh] bg-black text-#F7F0BC">
-      <div className="sticky top-0 flex h-screen items-center justify-center">
+      <div className="sticky top-0 flex flex-col h-screen items-center justify-center">
+
+      <SlideUpText text={'OUR PROCESS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out"/>
         <svg
           className="bg-red300 w-full max-w-[480px] md:max-w-[600px] h-auto"
           viewBox="0 0 600 600"

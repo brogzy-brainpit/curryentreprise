@@ -33,7 +33,7 @@ function Zoom() {
       muted:false
     },
     {
-      src: '/videos/hero.mp4',
+      src: '/videos/vid2.mp4',
       scale: scale5,
       type: 'video',
       muted:true
@@ -51,21 +51,21 @@ function Zoom() {
       muted:true
     },
     {
-      src: Picture5,
+       src: '/videos/vid2.mp4',
       scale: scale6,
-      type: 'image',
+      type: 'video',
       muted:true
     },
     {
-      src: Picture6,
+      src: '/videos/vid2.mp4',
       scale: scale8,
-      type: 'image',
+      type: 'video',
       muted:true
     },
     {
-      src: Picture7,
+      src: '/videos/vid2.mp4',
       scale: scale9,
-      type: 'image',
+      type: 'video',
       muted:true
     },
   ];
