@@ -6,6 +6,7 @@ import Picture7 from '../../public/images/7.jpeg';
 import Image from 'next/image';
 import { useScroll, useTransform, motion, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { VolumeOff } from 'lucide-react';
 
 function Zoom() {
   const container = useRef(null);
@@ -26,39 +27,46 @@ function Zoom() {
 
   const pictures = [
     {
-      src: 'https://video.wixstatic.com/video/bcc971_854ad70247c842c3ab892938519e8d68/1080p/mp4/file.mp4',
+      // src: 'https://video.wixstatic.com/video/bcc971_854ad70247c842c3ab892938519e8d68/1080p/mp4/file.mp4',
       scale: scale4,
       type: 'video',
+      muted:false
     },
     {
       src: '/videos/hero.mp4',
       scale: scale5,
       type: 'video',
+      muted:true
     },
     {
       src: '/videos/vid2.mp4',
       scale: scale6,
       type: 'video',
+      muted:true
     },
     {
       src: '/videos/vid2.mp4',
       scale: scale5,
       type: 'video',
+      muted:true
     },
     {
       src: Picture5,
       scale: scale6,
       type: 'image',
+      muted:true
     },
     {
       src: Picture6,
       scale: scale8,
       type: 'image',
+      muted:true
     },
     {
       src: Picture7,
       scale: scale9,
       type: 'image',
+      muted:true
     },
   ];
 
@@ -88,13 +96,14 @@ function Zoom() {
   return (
     <div ref={container} className={styles.container}>
       <div ref={trackZoom} className={styles.sticky}>
-        {pictures.map(({ src, scale, type }, index) => (
+        {pictures.map(({ src, scale, type,muted }, index) => (
           <motion.div key={index} style={{ scale }} className={styles.el}>
             <div className={styles.imageContainer}>
               {type === 'video' ? (
-                <video
+               <div className='w-full h-full relative'>
+                 <video
                   ref={(el) => (videoRefs.current[index] = el)} // ✅ store ref
-                  muted
+                  muted={muted}
                   loop
                   playsInline
                   className="w-full h-full object-cover transition-all duration-700 ease-in-out"
@@ -102,6 +111,8 @@ function Zoom() {
                   <source src={src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                
+               </div>
               ) : (
                 <Image src={src} fill alt="image" placeholder="blur" />
               )}

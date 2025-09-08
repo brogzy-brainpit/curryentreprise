@@ -6,6 +6,7 @@ import { AnimatePresence,} from 'framer-motion';
 import Preloader from '@/components/Preloader';
 
 import Zoom from '@/components/Zoom';
+import Infinite from '@/components/Infinite';
 import Houses from '@/components/Houses';
 import Services from '@/components/Services';
 import WhyUs from '@/components/WhyUs';
@@ -61,6 +62,7 @@ useEffect(() => {
            {inView && <Header />}
       <Landing inView={inView}  />
     
+      {/* <Infinite/> */}
       <Zoom/>
       <Landing2 />
     <OurNumbers/>

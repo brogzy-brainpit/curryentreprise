@@ -32,9 +32,9 @@ function OurNumbers() {
 <div className='breaker-chil flex w-full justify-between'>
   <div className='bg-green-30 p-2  border-r-0 border border-brand-text dark:border-brand-text-dark transition-all duration-500 flex justify-center items-center flex-col'>
  <h2 className='font-custom text-footer leading-[1]  text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out'>
- <CountUp end={35} decimals={0} suffix="%" delay={3000} enableScrollSpy  duration={2} />
+ <CountUp end={4.7} decimals={1} delay={3000} enableScrollSpy  duration={2} />
   </h2>
- <p className='text-par font-normal text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out'>Conversion Rate</p>
+ <p className='text-par font-normal text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out'>Star Rated</p>
 </div>
 <div className='bg-green-30 p-2 border border-brand-text dark:border-brand-text-dark transition-all duration-500 flex justify-center items-center flex-col flex-1'>
 <h2 className='font-custom text-footer leading-[1]  text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out'>

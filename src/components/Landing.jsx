@@ -23,16 +23,16 @@ function Landing({inView}) {
         {/* Right side with styled video */}
         <div className="z-[4] w-full h-full absolute top-0 left-0 overflow-hidden">
           {/* VIDEO */}
-          {/* <video
+          <video
             autoPlay
             muted
             loop
             playsInline
             className="w-full h-full object-cover filter grayscal group-hover:grayscal-0 transition-all duration-700 ease-in-out scale100 group-hover:scale105"
           >
-            <source src="/videos/hero.mp4" type="video/mp4" />
+            <source src="/videos/vid3.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
            
  </div>
         

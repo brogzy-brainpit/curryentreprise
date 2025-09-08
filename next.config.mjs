@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: [
       'cdn.prod.website-files.com', // ✅ allow your image domain
+      'bymemet.vercel.app',
     ],
   },
 }
