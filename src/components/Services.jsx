@@ -19,13 +19,13 @@ function Services() {
         'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642423902f7b0e7b0a2b7275_image-p-500.jpg',
     },
     {
-      text: 'Featurette',
+      text: 'Featurette [10-20 minutes]',
       desc: 'An extended version of the highlight reel featuring additional speeches and capturing the best and most emotional moments, lasting between 10 to 20 minutes',
       image:
         'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
     },
       {
-      text: 'Feature offer',
+      text: 'Feature [1-5 Hours]',
       desc: 'this is a comprehensive edit covering the entire day from preparation to the end of the reception. We carefully select and edit the standout moments in chronological order, resulting in a video lasting to 3 hours.',
       image:
         'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
