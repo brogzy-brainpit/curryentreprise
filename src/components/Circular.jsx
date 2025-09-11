@@ -112,10 +112,10 @@ export default function ProcessCircle() {
   );
 
   return (
-    <section ref={containerRef} className="h-[400vh] bg-black text-#F7F0BC py-10">
+    <section ref={containerRef} className="h-[400vh] bg-black text-#F7F0BC ">
       <div id="ourProcess" className="sticky top-0 flex flex-col h-screen items-center justify-center">
     <BlobBackground className='h-full'>
-      <SlideUpText text={'OUR WORK PROCESS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text-dark transition-all duration-500 ease-in-out"/>
+      <SlideUpText text={'OUR PROCESS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text-dark transition-all duration-500 ease-in-out"/>
         <svg
           className="bg-red300 w-full max-w-[580px] md:max-w-[600px] h-auto"
           viewBox="0 0 600 600"
