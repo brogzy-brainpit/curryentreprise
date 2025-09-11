@@ -10,13 +10,15 @@ import NewsletterModal from "@/components/NewsletterModal";
 
 export const metadata = {
   title: "curry enterprise - wedding video editing agency",
-  description: "discription of what you offer, a kind of killer copy that sell & converts",
+  description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free."
+,
   openGraph: {
     title: "curry enterprise - wedding video editing agency",
-    description: "discription of what you offer, a kind of killer copy that sell & converts",
+    description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free."
+,
     images: [
       {
-        url: "/images/SEO.png", // <- place your image inside /public/images/SEO.png
+        url: "/images/SEO2.png", // <- place your image inside /public/images/SEO.png
         width: 1200,
         height: 630,
         alt: "curry enterprise wedding video editing preview",
@@ -26,8 +28,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "curry enterprise - wedding video editing agency",
-    description: "discription of what you offer, a kind of killer copy that sell & converts",
-    images: ["/images/SEO.png"], // <- same image for Twitter card
+    description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free."
+,
+    images: ["/images/SEO2.png"], // <- same image for Twitter card
   },
 };
 
