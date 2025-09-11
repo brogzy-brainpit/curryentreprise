@@ -43,6 +43,10 @@ export default function Index() {
     href: "#why",
   },
   {
+    title: "our process",
+    href: "#ourProcess",
+  },
+  {
     title: "Testimonials",
     href: "#testimonials",
   },
@@ -60,8 +64,8 @@ export default function Index() {
             <div className={`${styles.logo} text-brand-text-dark transition-all duration-500 ease-in-out`}>
                 <p className={`${styles.copyright} font-custom`}>©</p>
                 <div className={`${styles.name} font-custom mix-blend-differenc text-brand-text-dark`}>
-                    <p className={styles.codeBy}>Coach</p>
-                    <p className={styles.dennis}>Memet</p>
+                    <p className={styles.codeBy}>Curry</p>
+                    <p className={styles.dennis}>Enterprise</p>
                     {/* <p className={styles.snellenberg}>Realtor</p> */}
                 </div>
             </div>

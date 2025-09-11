@@ -6,21 +6,32 @@ import Google from '../../public/images/google.png'
 import Image from "next/image";
 const reviews = [
   {
-    text: "Brilliant website",
-    name: "Teresa Christopher",
+    text: "The edits were stunning — my clients were blown away by how cinematic the final film looked. Saved me hours of work!",
+    name: "David Reynolds",
     rating: 5,
   },
   {
-    text: "Amazing service and super easy!",
-    name: "John Doe",
+    text: "Super professional and fast turnaround. Exactly the storytelling style I wanted for my couple’s wedding film.",
+    name: "Sophia Martinez",
     rating: 5,
   },
   {
-    text: "Highly recommend to friends and family.",
-    name: "Aisha Bello",
+    text: "I’ve worked with other editors before, but this level of detail in color grading and pacing is next level.",
+    name: "James Okafor",
+    rating: 5,
+  },
+  {
+    text: "The final cut was clean, emotional, and client-ready. Communication throughout the process was smooth too.",
+    name: "Hannah Lee",
     rating: 4,
   },
+  {
+    text: "Consistently delivers polished wedding edits that make my brand look more professional to my couples.",
+    name: "Michael Thompson",
+    rating: 5,
+  },
 ];
+
 
 const Review = () => {
   const [index, setIndex] = useState(0);
@@ -107,7 +118,7 @@ const Review = () => {
        </Magnetic>
       </div>
 
-      <a
+      {/* <a
         href="#"
         className="text-brand-text dark:text-brand-text-dark ease-in-out inline-flex items-center gap-2 border border-brand-text dark:border-brand-text-dark transition-all duration-500 rounded-full px-5 py-2 text-sm font-medium hover:bg-gray-100"
       >
@@ -120,7 +131,7 @@ const Review = () => {
           className="w-8 h-8"
         />
         All Google Reviews
-      </a>
+      </a> */}
     </div>
   );
 };

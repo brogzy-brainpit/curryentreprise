@@ -27,7 +27,7 @@ function Zoom() {
 
   const pictures = [
     {
-      // src: 'https://video.wixstatic.com/video/bcc971_854ad70247c842c3ab892938519e8d68/1080p/mp4/file.mp4',
+      src: 'https://video.wixstatic.com/video/bcc971_854ad70247c842c3ab892938519e8d68/1080p/mp4/file.mp4',
       scale: scale4,
       type: 'video',
       muted:false

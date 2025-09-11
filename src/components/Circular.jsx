@@ -2,6 +2,7 @@
 import SlideUpText from "@/app/effects/SlideUpText";
 import { motion, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import BlobBackground from "./BlobBackground";
 
 function StepDot({key, cx, cy, r, angle, label, scrollYProgress, circumference, isActive }) {
   const rad = (angle * Math.PI) / 180;
@@ -22,8 +23,8 @@ function StepDot({key, cx, cy, r, angle, label, scrollYProgress, circumference, 
     [0.6, 1]
   );
 
-  if (angle === 0) x += 48;
-  if (angle === 180) x -= 48;
+  if (angle === 0) x += 58;
+  if (angle === 180) x -= 58;
   const labelDy = angle === -90 ? -20 : angle === 90 ? 28 : 6;
 
   return (
@@ -111,12 +112,12 @@ export default function ProcessCircle() {
   );
 
   return (
-    <section ref={containerRef} className="h-[400vh] bg-black text-#F7F0BC">
-      <div className="sticky top-0 flex flex-col h-screen items-center justify-center">
-
-      <SlideUpText text={'OUR PROCESS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out"/>
+    <section ref={containerRef} className="h-[400vh] bg-black text-#F7F0BC py-10">
+      <div id="ourProcess" className="sticky top-0 flex flex-col h-screen items-center justify-center">
+    <BlobBackground className='h-full'>
+      <SlideUpText text={'OUR WORK PROCESS'} center delay={0.04} duration={0.5} className="text-footer text-center leading-[1] font-custom text-brand-text-dark transition-all duration-500 ease-in-out"/>
         <svg
-          className="bg-red300 w-full max-w-[480px] md:max-w-[600px] h-auto"
+          className="bg-red300 w-full max-w-[580px] md:max-w-[600px] h-auto"
           viewBox="0 0 600 600"
           preserveAspectRatio="xMidYMid meet"
         >
@@ -197,7 +198,9 @@ export default function ProcessCircle() {
             </motion.div>
           </foreignObject>
         </svg>
+</BlobBackground>
       </div>
     </section>
+
   );
 }

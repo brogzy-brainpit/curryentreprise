@@ -60,7 +60,7 @@ function Landing({inView}) {
         </div>
   <div className="py-4 z-[10]  w-full flex gap-[2px] flex-col items-center md:items-start">
  {/* Bottom clients section */}
-    <SlideUpText gap='4px' text={"Trusted by 45+ clients"}  className="font-normal text-[#92AF3F text-brand-text-dark text-[12px] capitalize mix-blend-difference"/>
+    <SlideUpText gap='4px' text={"Trusted by 45+ wedding videographers"}  className="font-normal text-[#92AF3F text-brand-text-dark text-[12px] capitalize mix-blend-difference"/>
           <ScaleUpContent delay={0.50}>
     <img alt="clients" className="w-[200px] md:w-[220px]" src="/images/clients.png" />
         </ScaleUpContent>

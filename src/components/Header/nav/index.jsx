@@ -26,13 +26,14 @@ export default function Index({setIsActive,isActive,navItems}) {
        <div className={`${styles.body} py-[60px] px-4 container mx-auto`}>
             <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
                
-                    <div className=' flex justify-between items-center uppercase text-[13px] font-custom-condensed mb-[30px] pb-[10px]  border-b-[1px] border-b-brand-text  text-brand-text dark:text-brand-text-dark duration-500 transition-colors'>
+                    <div className='flex justify-between items-center uppercase text-[13px] font-custom-condensed mb-[30px] pb-[10px]  border-b-[1px] border-b-brand-text  text-brand-text dark:text-brand-text-dark duration-500 transition-colors'>
                         <p className='text-brand-text'>Navigation</p>
                             <Magnetic>
-                            <div>
+                               <div>
                             <DarkModeToggle/>
-                            </div>  
+                            </div> 
                             </Magnetic>
+                            
                     </div>
                     {
                       navItems.map( (data, index) => {

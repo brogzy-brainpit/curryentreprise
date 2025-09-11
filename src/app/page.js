@@ -18,7 +18,8 @@ import Landing2 from '@/components/Landing2';
 import Circular from '@/components/Circular';
 import Anime from '@/components/Anime';
 import Header from "@/components/Header";
-
+import Projects from "@/components/Projects";
+import Footer from '@/components/Footer';
 
 
 
@@ -63,16 +64,18 @@ useEffect(() => {
       <Landing inView={inView}  />
       {/* <Infinite/> */}
       <Landing2 />
-      {/* <Zoom/> */}
+      <Zoom/>
     <OurNumbers/>
     {/* <Intro/> */}
-    <Anime/>
     <Services/>
+    <Projects header/>
+    <Anime/>
       <Circular />
     <CalModalInline/>
-    <WhyUs/>
+    {/* <WhyUs/> */}
     <Review/>
-     <Houses/>
+     {/* <Houses/> */}
+     <Footer/>
 
     </main>
   );

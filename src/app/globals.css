@@ -148,6 +148,9 @@
 .breaker-child{
   width: 50%;
 }
+.testClip{
+  clip-path: polygon(0% 20%, 59% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
 @media (max-width: 768px) {
   .breaker{
     display: flex;

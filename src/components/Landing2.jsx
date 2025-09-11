@@ -3,8 +3,8 @@ import React from 'react'
 
 function Landing2() {
   return (
-    <section className='min-h-[70vh   py-12'>
-<div className='w-full h-full container mx-auto breaker'>
+    <section className='min-h-[70vh   py-12 container mx-auto '>
+<div id='about' className='w-full h-full container mx-auto breaker'>
 
 <div className=' breaker-child py-8'>
     <div className='flex gap-4 items-center'>

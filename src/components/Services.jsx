@@ -15,21 +15,23 @@ function Services() {
     {
       text: 'Highlights [3-5 minutes]',
       desc: 'We captur and incoporate the most significant and emotional moments of the wedding using carefully selected music to create a comprehensive recap of the entire day',
-      image:
-        'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642423902f7b0e7b0a2b7275_image-p-500.jpg',
+      image:'https://static.wixstatic.com/media/bcc971_afe585b10d6b49878372826b7a4cd9f9~mv2.jpeg/v1/fill/w_310,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/33bb8ec0-7e94-42f0-b75d-2a8349cc7bf4.jpeg',
+      price:'$235-$275'
     },
     {
       text: 'Featurette [10-20 minutes]',
       desc: 'An extended version of the highlight reel featuring additional speeches and capturing the best and most emotional moments, lasting between 10 to 20 minutes',
       image:
-        'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
-    },
+        'https://static.wixstatic.com/media/bcc971_c5889fd07fe94f54b503e7b9dc0fd05e~mv2.jpeg/v1/crop/x_80,y_0,w_440,h_400/fill/w_310,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Must-Have%20Photos%20With%20Your%20Groom%20(1).jpeg',
+       price:'$280-$300'   
+       },
       {
       text: 'Feature [1-5 Hours]',
       desc: 'this is a comprehensive edit covering the entire day from preparation to the end of the reception. We carefully select and edit the standout moments in chronological order, resulting in a video lasting to 3 hours.',
       image:
-        'https://cdn.prod.website-files.com/6422913f262cf0e29a5f5513/642a890b0190110ed7feb538_image%203.jpg',
-    },
+        'https://static.wixstatic.com/media/bcc971_4513159c935947a488d92500f450dfc6~mv2.jpeg/v1/crop/x_0,y_314,w_1068,h_972/fill/w_310,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rural%20Michigan%20Intimate%20Wedding%20in%20the%20fall%20_%20Alli%20Fenwick%20Photography.jpeg',
+     price:'$275-$300'
+      },
   ];
   const review = reviews[index];
 
@@ -64,9 +66,9 @@ function Services() {
                 setDirection(1);
                 setIndex(0);
               }}
-              className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
-                ${index === 0 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
-            >
+             className={`font-normal text-para border border-brand-text dark:border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
+                ${index === 0 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text dark:text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
+             >
               Highlight
             </p>
           </Magnetic>
@@ -76,8 +78,8 @@ function Services() {
                 setDirection(-1);
                 setIndex(1);
               }}
-              className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
-                ${index === 1 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
+              className={`font-normal text-para border border-brand-text dark:border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
+                ${index === 1 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text dark:text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
             >
              Featurette
             </p>
@@ -88,9 +90,9 @@ function Services() {
                 setDirection(-1);
                 setIndex(2);
               }}
-              className={`font-normal text-para border border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
-                ${index === 2 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
-            >
+             className={`font-normal text-para border border-brand-text dark:border-brand-text-dark cursor-pointer rounded-full py-2 px-4 min-w-4 transition-colors duration-300
+                ${index === 2 ? 'bg-[#94B141] text-[#1c2218]' : 'text-brand-text dark:text-brand-text-dark hover:bg-[#94B141] hover:text-[#1c2218]'}`}
+             >
              Feature offer
             </p>
           </Magnetic>
@@ -116,6 +118,9 @@ function Services() {
             </h2>
             <p className="text-para font-normal text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out">
               {review.desc}
+            </p>
+            <p className="text-[26px] font-custom-condensed text-[#94B13C] font-bold transition-all duration-500 ease-in-out">
+              {review.price}
             </p>
             <ScaleUpContent delay={0.2} duration={0.6}>
               <CustomBtn title="book a call on this" href="#book-a-call" className="mt-5" />
@@ -146,9 +151,9 @@ const MotionImage = motion(Image);
   style={{ scale }}
   src={src}
   alt={'our coaching services'}
-  width={500}   // ✅ next/image requires width + height or fill
-  height={400}
-  className="h-[230px] md:h-[400px] object-cover w-auto rounded-2xl"
+  className="h-[230px] md:h-[400px] object-cover w-[] rounded-2xl"
+   width={600}
+            height={400}
 />
 
 </div>

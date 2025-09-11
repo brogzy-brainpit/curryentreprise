@@ -6,7 +6,7 @@ import CountUp from 'react-countup';
 
 function OurNumbers() {
   return (
-    <div className=' px-4 w-full py-[10vh] breaker container mx-auto'>
+    <div className=' px-4 w-full py-[10vh]  md:py-[10vh] breaker container mx-auto'>
 <div className=' breaker-child flex flex-3 font-custom text-footer leading-[1] pb-6 text-brand-text dark:text-brand-text-dark transition-all duration-500 ease-in-out'>
   My Numbers Do the Talking for Me
 </div>

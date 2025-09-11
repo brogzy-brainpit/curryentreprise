@@ -16,15 +16,15 @@ export default function MyApp() {
     })();
   }, [])
   return (
-    <div className="bg-slate-500 flex flex-col gap-4">
-      <p className="font-custom text-heading2 text-center" id="book-a-call">book a meeting with me</p>
+    <div className="flex flex-col gap-4 py-8 ">
+      <p className="font-custom text-footer leading-1 text-center text-brand-text dark:text-brand-text-dark" id="book-a-call">book a meeting</p>
     <Cal namespace="30min"
     calLink="coach-x/30min"
     style={{width:"100%",height:"100%",overflow:"scroll"}}
     config={{"layout":"month_view"}}
     
     
-  />;</div>
+  /></div>
   )
 };
   
