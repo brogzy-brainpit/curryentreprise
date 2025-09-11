@@ -5,7 +5,7 @@ const instance=axios.create({
     // baseURL:"http://localhost:5000/api/v1"
 })
 
-export const base="https://investorAcquisition.vercel.app"
+export const base="https://curryentreprise.vercel.app/"
 export const baseApi="https://inboxified.vercel.app/api/v1"
 
 // export const base="http://localhost:5173"
